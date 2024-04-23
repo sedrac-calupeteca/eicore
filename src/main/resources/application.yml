@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: eicore
+  datasource:
+    url: jdbc:mysql://localhost:3306/eicore
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: none
+    generate-ddl: false
+    show-sql: true
+  docker:
+    compose:
+      lifecycle-management: start_only
+      enabled: false
+  cache:
+    type: redis
+jwt:
+  private-key: classpath:certs/private.pem
+  public-key: classpath:certs/public.pem
